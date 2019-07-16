@@ -9,6 +9,7 @@ const postCssFlexbugsFixes = require('postcss-flexbugs-fixes');
 
 module.exports = {
   /* Your site config here */
+  pathPrefix: "/gatsby-starter-template",
   siteMetadata: {
     title: `Tim Giblin`,
     siteUrl: `https://timothygiblin.co.uk`,
