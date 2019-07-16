@@ -1,0 +1,37 @@
+.grid {
+	display: grid;
+  column-gap: 0;
+  row-gap: 0;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.header {
+  grid-row: 1;
+}
+
+.wrap {
+  grid-row: 2;
+  position: relative;
+}
+
+.footer {
+  grid-row: 3;
+}
+
+.row {
+  display: grid;
+  column-gap: $spacer/2;
+  grid-template-columns:
+    minmax(#{$spacer/2}, auto)
+    repeat(12, 1fr)
+    minmax(#{$spacer/2}, auto);
+
+  @include tablet {
+    grid-template-columns:
+      minmax(#{$spacer/2}, $spacer)
+      repeat(12, 1fr)
+      minmax(#{$spacer/2}, $spacer);
+  }
+}

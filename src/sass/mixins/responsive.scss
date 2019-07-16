@@ -1,0 +1,53 @@
+@mixin small {
+  @media screen and (min-width: #{$small}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin full {
+  @media screen and (min-width: #{$full}) {
+    @content;
+  }
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+@include small {
+  .container {
+    max-width: #{$small - $spacer};
+  }
+}
+
+@include tablet {
+  .container {
+    max-width: #{$tablet - $spacer};
+  }
+}
+
+@include desktop {
+  .container {
+    max-width: #{$desktop - $spacer};
+  }
+}
+
+@include full {
+  .container {
+    max-width: #{$full - $spacer};
+  }
+}

@@ -1,0 +1,10 @@
+@function rem($size) {
+  $remSize: $size / $body-size;
+
+  @return #{$remSize}rem;
+}
+
+@mixin font_size($size) {
+  font-size: $size; //Fallback in px
+  font-size: rem($size);
+}
